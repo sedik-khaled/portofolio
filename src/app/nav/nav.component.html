@@ -1,0 +1,89 @@
+<!-- <div class="container ">
+        
+    <div class="links">
+        <ul>
+            <li>
+              <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            </li>
+            <li>
+              <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About</a>
+            </li>
+            <li>
+              <a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Projects</a>
+            </li>
+          </ul>
+        
+       
+        
+        
+    </div>
+    <div class="logo">
+        FD
+    </div>
+    <div class="icons">
+        
+
+        <a class="border0" href="https://github.com/sedik-khaled" target="_blank">
+            <svg viewBox="0 0 24 24"
+            width="1em" height="1em" fill="black" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 16.42 4.87 20.17 8.84 21.54C9.34 21.64 9.5 21.35 9.5 21.1V19.2C6.73 19.8 6.14 18.04 6.14 18.04C5.73 16.92 5.14 16.62 5.14 16.62C4.26 16.06 5.22 16.07 5.22 16.07C6.2 16.14 6.7 17.06 6.7 17.06C7.56 18.64 8.96 18.16 9.54 17.88C9.62 17.22 9.89 16.76 10.2 16.5C7.91 16.24 5.5 15.3 5.5 11.7C5.5 10.63 5.86 9.74 6.47 9.06C6.38 8.79 6.06 7.83 6.56 6.5C6.56 6.5 7.38 6.21 9.5 7.54C10.26 7.34 11.06 7.25 11.86 7.25C12.66 7.25 13.46 7.34 14.22 7.54C16.34 6.21 17.16 6.5 17.16 6.5C17.66 7.83 17.34 8.79 17.25 9.06C17.86 9.74 18.22 10.63 18.22 11.7C18.22 15.31 15.81 16.23 13.52 16.48C13.9 16.81 14.24 17.44 14.24 18.42V21.1C14.24 21.35 14.4 21.64 14.9 21.54C18.87 20.17 21.74 16.42 21.74 12C21.74 6.48 17.26 2 12 2Z"/>
+            </svg>
+        </a>
+
+        <a class="border0" href="https://linkedin.com/" target="_blank">
+            <svg viewBox="0 0 24 24"  width="1em" height="1em" fill="#0077B5" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 0H5C2.24 0 0 2.24 0 5V19C0 21.76 2.24 24 5 24H19C21.76 24 24 21.76 24 19V5C24 2.24 21.76 0 19 0ZM7 20H4V9H7V20ZM5.5 7.5C4.4 7.5 3.5 6.6 3.5 5.5C3.5 4.4 4.4 3.5 5.5 3.5C6.6 3.5 7.5 4.4 7.5 5.5C7.5 6.6 6.6 7.5 5.5 7.5ZM20 20H17V14C17 13.34 16.66 12 15.5 12C14.34 12 14 13.34 14 14V20H11V9H14V10.5C14.5 9.34 16 8.5 17.5 8.5C20 8.5 20 10.5 20 12.5V20Z"/>
+            </svg>
+        </a>
+
+        <a class="border0" href="https://facebook.com/" target="_blank">
+            <svg viewBox="0 0 24 24"  width="1em" height="1em" fill="#1877F2" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 17.02 5.84 21.22 10.63 21.88V14.89H7.89V12H10.63V9.79C10.63 7.06 12.33 5.72 14.71 5.72C15.9 5.72 17.14 5.95 17.14 5.95V8.59H15.74C14.36 8.59 13.99 9.41 13.99 10.26V12H16.94L16.44 14.89H13.99V21.88C18.78 21.22 22 17.02 22 12Z"/>
+            </svg>
+        </a>
+
+        
+
+        
+        
+        
+    </div>
+
+</div> -->
+<nav class="navbar" @slideInDown>
+    <div class="logo">MyPortfolio</div>
+  
+    <ul class="nav-links">
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+    </ul>
+  
+    <div class="social-icons">
+      <a href="https://www.facebook.com/seddik.khaled.92" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.linkedin.com/in/sedik-khaled-ramadan-495935249/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/sedik-khaled" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  
+    <!-- Burger icon (always visible) -->
+    <div class="burger" (click)="toggleMenu()">&#9776;</div>
+  </nav>
+  
+  <!-- Side Menu -->
+  <div class="side-menu" [class.open]="isMenuOpen">
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
+      <div class="side-social-icons">
+        <a href="https://www.facebook.com/seddik.khaled.92/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/sedik-khaled-ramadan-495935249/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/sedik-khaled" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      
+    </ul>
+  </div>
+  
+  <!-- Overlay -->
+  <div class="overlay" *ngIf="isMenuOpen" (click)="closeMenu()"></div>
+  
