@@ -87,7 +87,7 @@
   .hireme{
         position: fixed;
         right: 0px;
-        top: 80px;
+        bottom:  0px;
         opacity: 0.2;
         display: flex;
         align-items: center;
@@ -98,7 +98,7 @@
             transition: 0.3s ease-in-out;
         }
         svg{
-            width: 200px;
+            width: 150px;
             font-size: 40px;
             font-weight: 700;
             height: fit-content;
